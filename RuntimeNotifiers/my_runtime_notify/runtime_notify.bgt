@@ -1,0 +1,18 @@
+file f;
+#include"prowl.bgt"
+prowl p("GenerateAnID");
+void main()
+{
+f.open("latest_runtime.txt","rb");
+string r=p.post(readfl("rmname.txt"),"Runtime Error",f.read());
+f.close();
+wait(250);
+exit();
+}
+string readfl(string name)
+{
+f.open(name,"rb");
+string d=f.read();
+f.close();
+return d;
+}
